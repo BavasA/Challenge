@@ -1,0 +1,47 @@
+Feature: Smoke feature
+
+  Scenario Outline: validate pet post service                      [90m# smoke.feature:3[0m
+    [36mGiven [0m[36muser adds pet "<petName>" with "<id>" using post service[0m
+    [36mThen [0m[36mvalidate "<petName>" in response[0m
+
+    Examples: 
+
+  Scenario Outline: validate pet post service                     [90m# smoke.feature:8[0m
+    [32mGiven [0m[32muser adds pet "[0m[32m[1mcatiee[0m[32m" with "[0m[32m[1m100001[0m[32m" using post service[0m [90m# StepDefnitions.user_adds_pet_with_using_post_service(String,String)[0m
+    [32mThen [0m[32mvalidate "[0m[32m[1mcatiee[0m[32m" in response[0m                            [90m# StepDefnitions.validate_in_response(String)[0m
+
+  Scenario Outline: Update petname                                  [90m# smoke.feature:11[0m
+    [36mGiven [0m[36muser edits pet "<petName>" with "<id>" using post service[0m
+    [36mThen [0m[36mvalidate "<petName>" in response[0m
+
+    Examples: 
+
+  Scenario Outline: Update petname                                     [90m# smoke.feature:16[0m
+    [32mGiven [0m[32muser edits pet "[0m[32m[1mParrooooot[0m[32m" with "[0m[32m[1m100001[0m[32m" using post service[0m [90m# StepDefnitions.user_edits_pet_with_using_post_service(String,String)[0m
+    [32mThen [0m[32mvalidate "[0m[32m[1mParrooooot[0m[32m" in response[0m                             [90m# StepDefnitions.validate_in_response(String)[0m
+
+  Scenario Outline: getPetByIdAndValidateName   [90m# smoke.feature:18[0m
+    [36mGiven [0m[36muser gets pet by "<id>"[0m
+    [36mThen [0m[36mValidate status code "200" in response[0m
+    [36mThen [0m[36mvalidate "<petName>" in response[0m
+
+    Examples: 
+
+  Scenario Outline: getPetByIdAndValidateName   [90m# smoke.feature:24[0m
+    [32mGiven [0m[32muser gets pet by "[0m[32m[1m100001[0m[32m"[0m             [90m# StepDefnitions.user_gets_pet_by(String)[0m
+    [32mThen [0m[32mValidate status code "[0m[32m[1m200[0m[32m" in response[0m [90m# StepDefnitions.validate_status_code_in_response(String)[0m
+    [32mThen [0m[32mvalidate "[0m[32m[1mParrooooot[0m[32m" in response[0m      [90m# StepDefnitions.validate_in_response(String)[0m
+
+  Scenario Outline: getDeletePetByIdAndValidateName [90m# smoke.feature:26[0m
+    [36mGiven [0m[36muser deletes pet by "<id>"[0m
+    [36mThen [0m[36mValidate status code "200" in response[0m
+    [36mAnd [0m[36muser gets pet by "<id>"[0m
+    [36mThen [0m[36mValidate status code "404" in response[0m
+
+    Examples: 
+
+  Scenario Outline: getDeletePetByIdAndValidateName [90m# smoke.feature:33[0m
+    [32mGiven [0m[32muser deletes pet by "[0m[32m[1m100001[0m[32m"[0m              [90m# StepDefnitions.user_deletes_pet_by(String)[0m
+    [32mThen [0m[32mValidate status code "[0m[32m[1m200[0m[32m" in response[0m     [90m# StepDefnitions.validate_status_code_in_response(String)[0m
+    [32mAnd [0m[32muser gets pet by "[0m[32m[1m100001[0m[32m"[0m                   [90m# StepDefnitions.user_gets_pet_by(String)[0m
+    [32mThen [0m[32mValidate status code "[0m[32m[1m404[0m[32m" in response[0m     [90m# StepDefnitions.validate_status_code_in_response(String)[0m

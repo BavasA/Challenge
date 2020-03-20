@@ -1,0 +1,148 @@
+[
+  {
+    "source": "^user adds pet \"([^\"]*)\" with \"([^\"]*)\" using post service$",
+    "steps": [
+      {
+        "name": "user adds pet \"catiee\" with \"100001\" using post service",
+        "aggregatedDurations": {
+          "average": 4.8149166,
+          "median": 4.8149166
+        },
+        "durations": [
+          {
+            "duration": 4.8149166,
+            "location": "smoke.feature:4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^validate \"([^\"]*)\" in response$",
+    "steps": [
+      {
+        "name": "validate \"catiee\" in response",
+        "aggregatedDurations": {
+          "average": 0.627985,
+          "median": 0.627985
+        },
+        "durations": [
+          {
+            "duration": 0.627985,
+            "location": "smoke.feature:5"
+          }
+        ]
+      },
+      {
+        "name": "validate \"Parrooooot\" in response",
+        "aggregatedDurations": {
+          "average": 0.02716835,
+          "median": 0.02716835
+        },
+        "durations": [
+          {
+            "duration": 0.0232024,
+            "location": "smoke.feature:13"
+          },
+          {
+            "duration": 0.0311343,
+            "location": "smoke.feature:21"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user edits pet \"([^\"]*)\" with \"([^\"]*)\" using post service$",
+    "steps": [
+      {
+        "name": "user edits pet \"Parrooooot\" with \"100001\" using post service",
+        "aggregatedDurations": {
+          "average": 0.9842213,
+          "median": 0.9842213
+        },
+        "durations": [
+          {
+            "duration": 0.9842213,
+            "location": "smoke.feature:12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user deletes pet by \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "user deletes pet by \"100001\"",
+        "aggregatedDurations": {
+          "average": 0.9783155,
+          "median": 0.9783155
+        },
+        "durations": [
+          {
+            "duration": 0.9783155,
+            "location": "smoke.feature:27"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user gets pet by \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "user gets pet by \"100001\"",
+        "aggregatedDurations": {
+          "average": 0.94458865,
+          "median": 0.94458865
+        },
+        "durations": [
+          {
+            "duration": 0.9518257,
+            "location": "smoke.feature:19"
+          },
+          {
+            "duration": 0.9373516,
+            "location": "smoke.feature:29"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^Validate status code \"([^\"]*)\" in response$",
+    "steps": [
+      {
+        "name": "Validate status code \"200\" in response",
+        "aggregatedDurations": {
+          "average": 0.0041827,
+          "median": 0.0041827
+        },
+        "durations": [
+          {
+            "duration": 0.0044847,
+            "location": "smoke.feature:20"
+          },
+          {
+            "duration": 0.0038807,
+            "location": "smoke.feature:28"
+          }
+        ]
+      },
+      {
+        "name": "Validate status code \"404\" in response",
+        "aggregatedDurations": {
+          "average": 0.0027601,
+          "median": 0.0027601
+        },
+        "durations": [
+          {
+            "duration": 0.0027601,
+            "location": "smoke.feature:30"
+          }
+        ]
+      }
+    ]
+  }
+]

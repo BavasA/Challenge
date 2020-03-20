@@ -1,0 +1,62 @@
+<html>
+<head><style type="text/css">h1 {background-color:#9999CC}
+h2 {background-color:#BBBBCC}
+h3 {background-color:#DDDDFF}
+th {border:1px solid black;background-color:#CCCCDD;}
+td{border:1px solid black;}
+table {border:1px solid black;border-collapse: collapse;}
+.chart {border:0px none black;border-collapse: collapse;background-color: none;}
+.passed {background-color:lightgreen;font-weight:bold;color:darkgreen}
+.failed {background-color:tomato;font-weight:bold;color:darkred}
+.undefined {background-color:gold;font-weight:bold;color:goldenrod}
+.skipped {background-color:silver;font-weight:bold;color:darkgray}
+.known {background-color:goldenrod;font-weight:bold;color:darkred}
+.passed_description {background-color:#D0FFD0;font-weight:bold;font-style:italic;color:black}
+.failed_description {background-color:#FFA898;font-weight:bold;font-style:italic;color:black}
+.comment {font-family:courier;font-weight:normal;font-size:small;color:black;border:1px dashed black;background-color:silver}
+.tip {font-family:courier;font-weight:normal;font-size:small;color:white;background-color:black}
+OL { counter-reset: item }
+OL>LI { display: block }
+OL>LI:before { content: counters(item, ".") " "; counter-increment: item }
+
+div.header {
+    display: block; text-align: center;
+    position: running(header);
+}
+div.footer {
+    display: block; text-align: center;
+    position: running(footer);
+}
+div.content {page-break-after: always;}
+@page {
+	 size: __PAGESIZE__;
+     @top-center {
+     	content: "Detailed Results Report";
+	    color: silver;
+	    font-size: 14px;
+     }
+     @top-right {
+     	content: date("dd MMM, yyyy hh:mm");
+	    color: silver;
+	    font-size: 8px;
+     }
+    @bottom-right {
+    	content: "Page " counter(page) " of " counter(pages) ;
+	    color: silver;
+	    font-size: 8px;
+    }
+}
+ol a::after {
+  content: leader('.') target-counter(attr(href), page);
+}
+</style>
+<title>Detailed Results Report</title>
+  </head>
+  <body>
+    <div class='header'></div>
+    <div class='footer'></div>
+  <h1>Overview</h1>
+<table><tr><th></th><th>Passed</th><th>Failed</th><th>Known</th><th>Undefined</th><th>%Passed</th></tr><tr><th>Features</th><td class="passed">1</td><td class="failed">0</td><td class="known">0</td><td class="undefined">0</td><td>100.00</td></tr><tr><th>Scenarios</th><td class="passed">4</td><td class="failed">0</td><td class="known">0</td><td class="undefined">0</td><td>100.00</td></tr><tr><th>Steps</th><td class="passed">11</td><td class="failed">0</td><td class="known">0</td><td class="undefined">0</td><td>100.00</td></tr></table><div><b>Overall Duration: 0h 00m 09s</b></div>
+<a id="top"></a><h1>Table of Contents</h1><ol><li> <span class="passed"><a href="#feature-1smoke-feature">Smoke feature</a></span><ol><li> <span class="passed"><a href="#sc-8-smoke-feature;validate-pet-post-service;;2">validate pet post service</a></span></li><li> <span class="passed"><a href="#sc-16-smoke-feature;update-petname;;2">Update petname</a></span></li><li> <span class="passed"><a href="#sc-24-smoke-feature;getpetbyidandvalidatename;;2">getPetByIdAndValidateName</a></span></li><li> <span class="passed"><a href="#sc-33-smoke-feature;getdeletepetbyidandvalidatename;;2">getDeletePetByIdAndValidateName</a></span></li></ol></li></ol><h1>Detailed Results Report</h1><table width="700px"><tr class="passed"><td colspan="4"><b>Feature:</b> <a id="feature-1smoke-feature">Smoke feature</a></td></tr><tr class="passed"><td><small><b>Passed:</b> 4</small></td><td><small><b>Failed:</b> 0</small></td><td><small><b>Undefined:</b> 0</small></td><td><small>Duration: 9.35s</small></td></tr><tr class="passed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="passed"><td colspan="4"><b>Scenario Outline:</b> <a id="sc-8-smoke-feature;validate-pet-post-service;;2">validate pet post service</a></td></tr><tr class="passed"><td><small><b>Passed:</b> 2</small></td><td><small><b>Failed:</b> 0</small></td><td><small><b>Undefined:</b> 0</small></td><td><small>Duration: 5.44s</small></td></tr><tr class="passed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="passed"><td><b>Given </b> user adds pet &quot;catiee&quot; with &quot;100001&quot; using post service</td><td width="100">4.81s</td></tr><tr class="passed"><td><b>Then </b> validate &quot;catiee&quot; in response</td><td width="100">0.63s</td></tr></table></td></tr><tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr><tr class="passed"><td colspan="4"><b>Scenario Outline:</b> <a id="sc-16-smoke-feature;update-petname;;2">Update petname</a></td></tr><tr class="passed"><td><small><b>Passed:</b> 2</small></td><td><small><b>Failed:</b> 0</small></td><td><small><b>Undefined:</b> 0</small></td><td><small>Duration: 1.01s</small></td></tr><tr class="passed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="passed"><td><b>Given </b> user edits pet &quot;Parrooooot&quot; with &quot;100001&quot; using post service</td><td width="100">0.98s</td></tr><tr class="passed"><td><b>Then </b> validate &quot;Parrooooot&quot; in response</td><td width="100">0.02s</td></tr></table></td></tr><tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr><tr class="passed"><td colspan="4"><b>Scenario Outline:</b> <a id="sc-24-smoke-feature;getpetbyidandvalidatename;;2">getPetByIdAndValidateName</a></td></tr><tr class="passed"><td><small><b>Passed:</b> 3</small></td><td><small><b>Failed:</b> 0</small></td><td><small><b>Undefined:</b> 0</small></td><td><small>Duration: 0.99s</small></td></tr><tr class="passed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="passed"><td><b>Given </b> user gets pet by &quot;100001&quot;</td><td width="100">0.95s</td></tr><tr class="passed"><td><b>Then </b> Validate status code &quot;200&quot; in response</td><td width="100">0.00s</td></tr><tr class="passed"><td><b>Then </b> validate &quot;Parrooooot&quot; in response</td><td width="100">0.03s</td></tr></table></td></tr><tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr><tr class="passed"><td colspan="4"><b>Scenario Outline:</b> <a id="sc-33-smoke-feature;getdeletepetbyidandvalidatename;;2">getDeletePetByIdAndValidateName</a></td></tr><tr class="passed"><td><small><b>Passed:</b> 4</small></td><td><small><b>Failed:</b> 0</small></td><td><small><b>Undefined:</b> 0</small></td><td><small>Duration: 1.92s</small></td></tr><tr class="passed"><td colspan="4" style="padding-left:20px"> <table width="100%"><tr class="passed"><td><b>Given </b> user deletes pet by &quot;100001&quot;</td><td width="100">0.98s</td></tr><tr class="passed"><td><b>Then </b> Validate status code &quot;200&quot; in response</td><td width="100">0.00s</td></tr><tr class="passed"><td><b>And </b> user gets pet by &quot;100001&quot;</td><td width="100">0.94s</td></tr><tr class="passed"><td><b>Then </b> Validate status code &quot;404&quot; in response</td><td width="100">0.00s</td></tr></table></td></tr><tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr></table></td></tr><tr><td colspan="5"></td></tr></table>
+	</body>
+</html>
