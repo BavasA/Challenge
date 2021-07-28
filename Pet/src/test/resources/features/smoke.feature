@@ -23,4 +23,4 @@ Then Validate status code "200" in response
 Then validate "<petName>" in response
 Examples:
 |petName|id|
-#|Parrooooot|100001|
+|Parrooooot|100001|
